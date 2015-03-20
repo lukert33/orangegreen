@@ -1,0 +1,57 @@
+/* CUSTOM ADMIN CSS CHANGES */
+
+html {background: #dfdfdf}
+
+#adminmenu li.wp-menu-separator { height: 20px; }
+
+.welcome-panel-close { display:none }
+
+.metabox-holder .postbox-container .empty-container { display: none; }
+
+.welcome-panel-column-container { display: none; }
+
+#welcome-panel { background: transparent; border: none; opacity: 0 }
+
+#adminmenuback { background-color: #5A5A5A; }
+
+#adminmenuwrap, #adminmenu { background-color: transparent; }
+
+#adminmenu .wp-submenu-head, #adminmenu a.menu-top { font-size: 12px; }
+
+#adminmenuback { 
+	-webkit-box-shadow: inset -5px 0 15px 0 rgba(0,0,0,0.5);
+	box-shadow: inset -5px 0 15px 0 rgba(0,0,0,0.5);
+}
+
+.acf-wysiwyg-wrap iframe {
+min-height: 150px;
+}
+
+.acf-table td.acf-label {
+width: 15%;
+}
+
+#wp-admin-bar-essb { display: none; }
+
+.update-plugins { display: none !important; }
+
+#wpadminbar #wp-admin-bar-site-name>.ab-item:before { content: url(../img/admin/comp.png) !important; top:5px; opacity: 0.5; }
+.dashicons-dashboard:before { content: url(../img/admin/dash-2.png); top: 1px; position: relative; opacity: 0.5 }
+.dashicons-admin-post:before, .dashicons-format-standard:before { content: url(../img/admin/blog.png) !important; top: 1px; position: relative; opacity: 0.5 }
+.dashicons-admin-media:before { content: url(../img/admin/media-4.png); top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-page:before { content: url(../img/admin/pages-2.png); top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-users:before { content: url(../img/admin/user.png); top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-plugins:before { content: url(../img/admin/tool.png); top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-appearance:before { content: url(../img/admin/dash.png); top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-settings:before  { content: url(../img/admin/gear.png) !important; top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-generic:before { content: url(../img/admin/gear.png); top: 2px; position: relative; opacity: 0.5 }
+.dashicons-list-view:before { content: url(../img/admin/form.png) !important; top: 2px; position: relative; opacity: 0.5 }
+.dashicons-admin-network:before { content: url(../img/admin/map.png) !important; top: 2px; left:-1px; position: relative; opacity: 0.5 }
+.frm_38_trigger .wp-media-buttons .add_media span.wp-media-buttons-icon.frm-buttons-icon {background: url(../img/admin/form-grey.png) !important; position:  relative; top: 2px; left: -1px; }
+.frm_38_trigger #toplevel_page_formidable .wp-menu-image:before, .frm_38_trigger .wp-media-buttons .add_media span.wp-media-buttons-icon.frm-buttons-icon:before { content: ""; }
+#toplevel_page_gmw-add-ons  .dashicons-admin-map:before { content: url(../img/admin/map.png) !important; top: 2px; left:-1px; position: relative; opacity: 0.5 }
+
+.misc-pub-section {
+padding: 10px 10px 10px;
+font-size: 12px;
+}

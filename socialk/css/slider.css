@@ -1,0 +1,597 @@
+/* -----------------------------------------------------------------------------*/
+/* /// CORE                                                                     */
+/* -----------------------------------------------------------------------------*/
+
+.royalSlider {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	opacity: 1;
+}
+.royalSlider > * {
+	float: left;
+}
+
+.rsWebkit3d .rsSlide {
+	-webkit-transform: translateZ(0);
+}
+
+.rsWebkit3d .rsSlide,
+.rsWebkit3d .rsContainer,
+.rsWebkit3d .rsThumbs,
+.rsWebkit3d .rsPreloader,
+.rsWebkit3d img,
+.rsWebkit3d .rsOverflow,
+.rsWebkit3d .rsBtnCenterer,
+.rsWebkit3d .rsAbsoluteEl,
+.rsWebkit3d .rsABlock,
+.rsWebkit3d .rsLink {
+	-webkit-backface-visibility: hidden;
+}
+
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+    -webkit-transform: none;
+}
+
+.rsOverflow {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsVisibleNearbyWrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsVisibleNearbyWrap .rsOverflow {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+}
+
+.rsContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsArrow,
+.rsThumbsArrow {
+	cursor: pointer;
+}
+
+.rsThumb {
+	float: left;
+	position: relative;
+}
+
+
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+	opacity: 1;
+	-webkit-transition:opacity 0.3s linear;
+	-moz-transition:opacity 0.3s linear;
+	-o-transition:opacity 0.3s linear;
+	transition:opacity 0.3s linear;
+}
+.rsHidden {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-moz-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-o-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+
+
+.rsGCaption {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+.royalSlider.rsFullscreen {
+	position: fixed !important;
+	height: auto !important;
+	width: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: 2147483647 !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 0 !important;
+}
+
+.royalSlider .rsSlide.rsFakePreloader {
+	opacity: 1 !important;
+	-webkit-transition: 0s;
+	-moz-transition: 0s;
+	-o-transition:  0s;
+	transition:  0s;
+	display: none;
+}
+
+.rsSlide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	overflow: hidden;
+	perspective: 1000px;
+	height: 100%;
+	width: 100%;
+}
+
+.royalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+	height: auto;
+}
+
+.rsContent {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.rsPreloader {
+	position:absolute;
+	z-index: 0;	
+}
+
+.rsNav {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.rsNavItem {
+	-webkit-tap-highlight-color:rgba(0,0,0,0.25);
+}
+
+.rsThumbs {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	z-index: 22;
+}
+.rsTabs {
+	float: left;
+	background: none !important;
+}
+.rsTabs,
+.rsThumbs {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsVideoContainer {
+	width: auto;
+	height: auto;
+	line-height: 0;
+	position: relative;
+}
+
+.rsVideoFrameHolder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #141414;
+	opacity: 0;
+	-webkit-transition: .3s;
+}
+
+.rsVideoFrameHolder.rsVideoActive {
+	opacity: 1;
+}
+
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+	position: absolute;
+	z-index: 50;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 44px;
+}
+
+.rsABlock {
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 15;
+	
+}
+
+img.rsImg {
+	max-width: none;
+}
+
+.rsNoDrag {
+	cursor: auto;
+}
+
+.rsLink {
+	left:0;
+	top:0;
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:block;	
+	z-index: 20;
+	background: url(../img/slider-blank.gif);
+}
+
+.royalSlider * {
+    -webkit-backface-visibility: hidden;
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// BACKGROUND                                                               */
+/* -----------------------------------------------------------------------------*/
+
+.default,
+.default .rsOverflow,
+.default .rsSlide,
+.default .rsVideoFrameHolder,
+.default .rsThumbs {
+	background: #c4c4c4;
+	color: #FFF;
+}
+
+
+/* -----------------------------------------------------------------------------*/
+/* /// ARROWS                                                                   */
+/* -----------------------------------------------------------------------------*/
+
+.default .rsArrow {
+	width: 40px;
+	height: 100%;
+	position: absolute;
+	display: block;
+	top: 0;
+	cursor: pointer;
+	z-index: 21;
+}
+
+.default .rsArrowLeft { left: 10px; }
+.default .rsArrowRight { right: 10px; }
+
+.default .rsArrowIcn {		
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 50%;
+	display: block;
+	position: absolute;
+	top:50%;
+	margin-top: -20px;
+	cursor: pointer;	
+	opacity: 0.3;
+	-webkit-transition: opacity 500ms ease;
+	-moz-transition: opacity 500ms ease;
+	-ms-transition: opacity 500ms ease;
+	-o-transition: opacity 500ms ease;
+	transition: opacity 500ms ease;
+}
+.default .rsArrowIcn:hover {
+	opacity: 0.5;
+}
+
+
+.default.rsHor .rsArrowLeft .rsArrowIcn { background-image: url(../img/slider-arrow-left.png); }
+.default.rsHor .rsArrowRight .rsArrowIcn { background-image: url(../img/slider-arrow-right.png); }
+
+.default .rsArrowDisabled .rsArrowIcn { opacity: .1 }
+
+/* -----------------------------------------------------------------------------*/
+/* /// BULLETS                                                                  */
+/* -----------------------------------------------------------------------------*/
+
+.default .rsBullets {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 10px;
+}
+
+.default .rsBullet {
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+}
+
+.default .rsBullet span {
+	display: block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #CCC;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+.default .rsBullet.rsNavSelected span {
+	background: #000;
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// THUMBNAILS                                                               */
+/* -----------------------------------------------------------------------------*/
+
+.default .rsThumbsHor {
+	width: 100%;
+	height: 72px;
+}
+
+.default .rsThumbsVer {
+	width: 96px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.default.rsWithThumbsHor .rsThumbsContainer {
+	position: relative;
+	height: 100%;
+}
+
+.default.rsWithThumbsVer .rsThumbsContainer {
+	position: relative;
+	width: 100%;
+}
+
+.default .rsThumb {
+	float: left;
+	overflow: hidden;
+	width: 96px;
+	height: 72px;
+}
+
+.default .rsThumb img {
+	width: 100%;
+	height: 100%;
+}
+
+.default .rsThumb.rsNavSelected {
+	background: #333;
+}
+
+.default .rsThumb.rsNavSelected img {
+	filter: alpha(opacity=40);
+	opacity: 0.7;
+}
+
+.default .rsThumb.rsNavSelected span.thumbIco {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 2px solid #FFF;
+	border: 2px solid rgba(255,255,255,0.9);
+	-webkit-backface-visibility: hidden;
+} 
+
+.default .rsTmb {
+	display: block;
+}
+
+.default .rsThumbsArrow {
+	height: 100%;
+	width: 20px;
+	position: absolute;
+	display: block;
+	cursor: pointer;	
+	z-index: 21;	
+}
+
+.default.rsWithThumbsVer .rsThumbsArrow {
+	width: 100%;
+	height: 20px;
+}
+
+.default.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
+.default.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
+
+.default.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
+.default.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
+
+.default .rsThumbsArrowIcn {		
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 50%;
+	margin-top:-8px;	
+	margin-left: -8px;
+	position: absolute;	
+	cursor: pointer;	
+}
+
+.default.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
+.default.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+
+.default.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
+.default.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
+
+.default .rsThumbsArrowDisabled { display: none !important; }
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+	.default .rsThumb {
+		width: 59px;
+		height: 44px;
+	}
+	.default .rsThumbsHor {
+		height: 44px;
+	}
+	.default .rsThumbsVer {
+		width: 59px;
+	}
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// TABS                                                                     */
+/* -----------------------------------------------------------------------------*/
+
+.default .rsTabs {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align:center;
+	overflow: hidden; padding-top: 12px; position: relative;
+}
+
+.default .rsTab {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	height: auto;
+	width: auto;
+	color: #333;
+	padding: 5px 13px 6px;
+	min-width: 72px;
+	border: 1px solid #D9D9DD;
+	border-right: 1px solid #f5f5f5;
+	text-decoration: none;
+
+	background-color: #000;
+	background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4); 
+	background-image:    -moz-linear-gradient(top, #fefefe, #f4f4f4);
+	background-image:         linear-gradient(to bottom, #fefefe, #f4f4f4);
+
+	*display:inline; 
+	*zoom:1;
+}
+
+.default .rsTab:first-child {
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.default .rsTab:last-child { 
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	border-right:  1px solid #cfcfcf;
+}
+
+.default .rsTab:active { 
+	border: 1px solid #D9D9DD;   
+	background-color: #f4f4f4;
+	box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+.default .rsTab.rsNavSelected { 
+	color: #000;
+	border: 1px solid #999;
+	text-shadow: 1px 1px #838383;
+	box-shadow: 0 1px 9px rgba(102, 102, 102, 0.65) inset;
+	background: #ACACAC;
+	background-image: -webkit-linear-gradient(top, #ACACAC, #BBB);
+	background-image: -moz-llinear-gradient(top, #ACACAC, #BBB);
+	background-image: linear-gradient(to bottom, #ACACAC, #BBB);
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// VIDEO                                                                    */
+/* -----------------------------------------------------------------------------*/
+
+.default .rsPlayBtn {
+	width:53px;
+	height:38px;
+	cursor: pointer;
+}
+
+.default .rsPlayBtnIcon {
+	width:53px;
+	height:38px;
+	background-image: url(../img/slider-play.png);
+}
+
+.default .rsBtnCenterer {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width: 53px;
+	height: 38px;
+	margin-left: -26.5px;
+	margin-top: -19px;
+}
+
+.default .rsCloseVideoBtn {
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	z-index: 500;
+	position: absolute;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	display: none;
+}
+
+.default .rsCloseVideoBtn.rsiOSBtn {
+	top: -38px;
+	right: -6px;
+}
+
+.default .rsCloseVideoIcn {
+	margin: 6px;
+	width: 32px;
+	height: 32px;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #000;
+}
+
+.default .rsCloseVideoIcn:hover {
+	background-color: rgba(0,0,0,0.9);
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// PRELOADER                                                                */
+/* -----------------------------------------------------------------------------*/
+
+.default .rsPreloader {
+	width:80px;
+	height:80px;
+	background-image:url(../img/slider-preload.gif);
+	position: absolute;
+	top:0;right: 0;bottom: 0;left:0;
+	margin: auto;
+	z-index: 5;
+}

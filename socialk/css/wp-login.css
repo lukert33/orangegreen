@@ -1,0 +1,112 @@
+/* -----------------------------------------------------------------------------*/
+/* /// LOGIN SCREEN                                                             */
+/* -----------------------------------------------------------------------------*/
+
+#login {
+  padding-top: 100px;
+}
+
+.login h1 a {
+  width: 200px;
+  height: 78px;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  text-decoration: none;
+  background-image: url(../img/admin-logo.png);
+  background-size: 200px 78px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto 40px;
+  padding: 0;
+  border: 0; 
+}
+
+.login form {
+  font-weight: normal;
+  background: #fff;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 40px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+}
+
+.login label {
+  color: #df7a1c;
+  display: block;
+}
+
+.login form .input, .login input[type="text"] {
+  width: 100%;
+  color: #626262;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  background: #FFF;
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 5px 0px 5px 10px;
+  border: 1px solid #8B8B8B;
+  border-radius: 4px;
+  -webkit-transition: border linear .2s,box-shadow linear .2s;
+  -moz-transition: border linear .2s,box-shadow linear .2s;
+  -o-transition: border linear .2s,box-shadow linear .2s;
+  transition: border linear .2s,box-shadow linear .2s;
+  
+}
+
+.login form .input:focus, .login input[type="text"]:focus {
+  border-color: rgba(31, 161, 228, .9);
+  outline: 0;
+  outline: thin dotted \9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(31, 161, 228,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(31, 161, 228,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(31, 161, 228,.6);
+}
+
+.login form .forgetmenot { display: none; }
+
+.login .button-large {
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  text-transform: none;
+  background: #79af3a;
+  display: block;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: background 500ms, color 500ms;
+  -moz-transition: background 500ms, color 500ms;
+  -ms-transition: background 500ms, color 500ms;
+  -o-transition: background 500ms, color 500ms;
+  transition: background 500ms, color 500ms;
+}
+
+.login #nav, .login #backtoblog {
+  text-shadow: none;
+  text-align: center;
+}
+
+.login #nav a, .login #backtoblog a, .login #nav a:hover, .login #backtoblog a:hover {
+  color: #df7a1c !important;
+}
+
+.login .message, div.error, .login #login_error, div.error a, .login #login_error a {
+  color: #fff;
+  background-color: #363636;
+  border-color: #000;
+}
+
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+  color: #fff;
+  background: #df7a1c;
+  border-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  
+}
